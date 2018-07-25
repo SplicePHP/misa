@@ -1,0 +1,27 @@
+<div id="content">
+    <div>
+        <mdc-text-field [(ngModel)]="prefilledText" label="Username" #name></mdc-text-field>
+    </div>
+    <div>
+        <mdc-text-field #outlinedicon [outline]="true" [(ngModel)]="username" label="Event date">
+            <mdc-icon leading #leadingicon>event</mdc-icon>
+        </mdc-text-field>
+    </div>
+    <div>
+        <mdc-text-field #outlinedicon2 [outline]="true" [(ngModel)]="username" label="Event date"><mdc-icon leading #leadingicon2>event</mdc-icon></mdc-text-field>
+    </div>
+    <div>
+        <mdc-text-field #outlinedicon3 [outline]="true" [(ngModel)]="username" label="Event date"><mdc-icon leading #leadingicon3>event</mdc-icon></mdc-text-field>
+    </div>
+    <div>
+      <p>Value: {{outlinedicon.getValue()}}</p>
+      User: {{username}}
+      <button mdc-fab position='bottom-right' mini='true' class="purple500Fab">
+        <mdc-icon>add</mdc-icon>
+      </button>
+    </div>
+</div>
+
+
+
+

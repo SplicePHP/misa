@@ -1,13 +1,51 @@
 // http://ionicframework.com/docs/theming/
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import "~@ionic/angular/css/colors.css";
+// @import "~@ionic/angular/css/normalize.css";
+// @import "~@ionic/angular/css/structure.css";
+// @import "~@ionic/angular/css/typography.css";
+// @import "~@ionic/angular/css/colors.css";
 
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+// @import "~@ionic/angular/css/padding.css";
+// @import "~@ionic/angular/css/float-elements.css";
+// @import "~@ionic/angular/css/text-alignment.css";
+// @import "~@ionic/angular/css/text-transformation.css";
+// @import "~@ionic/angular/css/flex-utils.css";
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$mdc-theme-primary: #0054A6; // primary color
+$mdc-theme-secondary: #636466; // secondary color
+
+@import "~@angular-mdc/theme/material";
+
+// body {
+//     // background-color: $mdc-theme-secondary;
+// }
+
+// $mdc-theme-background: #ffffff;
+// @include mdc-text-field-textarea-fill-color(#000000);
+// @import "@material/textfield/mdc-text-field";
+.mdc-text-field--outlined{
+  width: 100%;
+}
+.mdc-text-field__input{
+  background: #fff;
+}
+
+body {
+  margin: 0;
+  // background: #F2F2F2;
+  height: 100vh;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 8pt auto;
+  height: 100%;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 8px;
+  padding: 8px;
+}

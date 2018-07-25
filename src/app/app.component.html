@@ -1,4 +1,25 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <!-- <ion-split-pane> -->
+        <!-- 
+            <ion-header>
+            <ion-toolbar>
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content> -->
+            <!-- <ion-router-outlet></ion-router-outlet> -->
+        <!-- </ion-content> -->
+        
+        <ion-header>
+            <app-nav></app-nav>
+        </ion-header>  
+        <ion-content>
+            <ion-scroll scrollY="true">
+                <!-- <div id="container">   -->
+                    <router-outlet></router-outlet>
+                <!-- </div> -->
+            </ion-scroll>
+        </ion-content>
+
+    <!-- </ion-split-pane> -->
 </ion-app>
-<button mat-button>Basic</button>

@@ -1,13 +1,26 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      <button mat-button>Basic</button>
     </ion-title>
   </ion-toolbar>
-</ion-header>
-
+</ion-header> -->
+<!-- 
 <ion-content padding>
   The world is your oyster.
   <p>If you get lost, the <a target="_blank" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
-  <button mat-button>Basic</button>
-</ion-content>
+</ion-content> -->
+<div id="content">
+  <div>
+    Home Page Content
+    <button (click)='hideHeader()'>Hide Header</button>
+    <button (click)='showHeader()'>Show Header</button>
+    <a routerLink="/dashboard">Dashboard</a>
+  </div>
+  <div>
+    Next element
+  </div>
+  <div>
+      Next element
+    </div>
+</div>

@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  constructor(){
+
+  }
+  fullScreen(){
+    document.getElementsByTagName('ion-header')[0].style.display = "none";
+  }
+  restoreHeader(){
+    document.getElementsByTagName('ion-header')[0].style.display = "block";
+  }
 }

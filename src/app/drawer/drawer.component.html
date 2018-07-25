@@ -1,0 +1,67 @@
+<!--
+<nav>
+  <ul>
+    <li>
+      <a routerLink="">Home</a>
+    </li>
+    <li>
+      <a routerLink="dashboard">Dashboard</a>
+    </li>
+    <li>
+      <a routerLink="home">Home</a>
+    </li>
+  </ul>
+</nav>
+-->
+
+      <mdc-drawer #temporary drawer='temporary' [fixedAdjustElement]="demoTemporaryContent" class="demo-drawer--custom">
+        <!-- <mdc-drawer-header>
+          <mdc-drawer-header-content>
+            Header goes here
+          </mdc-drawer-header-content>
+        </mdc-drawer-header> -->
+        <mdc-drawer-content>
+          <mdc-list-group>
+            <mdc-list>
+              <mdc-list-item>
+                <mdc-icon mdcListItemGraphic>home</mdc-icon><a routerLink="dashboard">Dashboard</a>
+              </mdc-list-item>
+              <mdc-list-item>
+                <mdc-icon mdcListItemGraphic>star</mdc-icon>Star
+              </mdc-list-item>
+              <mdc-list-item>
+                <mdc-icon mdcListItemGraphic>send</mdc-icon>Sent Mail
+              </mdc-list-item>
+              <mdc-list-item>
+                <mdc-icon mdcListItemGraphic>drafts</mdc-icon>Drafts
+              </mdc-list-item>
+              <mdc-list-divider></mdc-list-divider>
+              <mdc-list-item>
+                <mdc-icon mdcListItemGraphic>email</mdc-icon>All Mail
+              </mdc-list-item>
+              <mdc-list-item>
+                <mdc-icon mdcListItemGraphic>delete</mdc-icon>Trash
+              </mdc-list-item>
+              <mdc-list-item>
+                <mdc-icon mdcListItemGraphic>report</mdc-icon>Spam
+              </mdc-list-item>
+            </mdc-list>
+          </mdc-list-group>
+        </mdc-drawer-content>
+      </mdc-drawer>
+      <div #demoTemporaryContent>
+        <mdc-toolbar>
+          <mdc-toolbar-row>
+            <mdc-toolbar-section [alignStart]="true">
+              <mdc-icon mdc-toolbar-menu-icon (click)="temporary.open()">menu</mdc-icon>
+              <mdc-toolbar-title>Mobile Layout</mdc-toolbar-title>
+            </mdc-toolbar-section>
+            <mdc-toolbar-section [alignEnd]="true" [shrinkToFit]="true">
+              <a href="#/drawer-demo" mdcRipple mdc-toolbar-icon material-icon>file_download</a>
+              <a href="#/drawer-demo" mdcRipple mdc-toolbar-icon material-icon>print</a>
+              <a href="#/drawer-demo" mdcRipple mdc-toolbar-icon material-icon>more_vert</a>
+            </mdc-toolbar-section>
+          </mdc-toolbar-row>
+        </mdc-toolbar>
+        Lorem ipsum dolor sit amet, ad erat postea ullamcorper nec, veri veniam quo et. Diam phaedrum ei mea, quaeque voluptaria efficiantur duo no. Eu adhuc veritus civibus nec, sumo invidunt mel id, in vim dictas detraxit. Per an legere iriure blandit. Veri iisque accusamus an pri.
+      </div>
