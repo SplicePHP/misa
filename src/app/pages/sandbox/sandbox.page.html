@@ -1,0 +1,46 @@
+
+<ion-header>
+    <app-toolbar></app-toolbar>
+</ion-header>
+<ion-content>
+    <div id="content">
+    <div>
+        <!-- <mdc-text-field [(ngModel)]="user.username" label="Username" #name></mdc-text-field> -->
+        
+        <button mdc-button [primary]="true" [raised]="true" (click)="setUser()">Save Data</button>
+    </div>
+    <div>
+        <mdc-text-field #outlinedicon [outline]="true" [(ngModel)]="username" label="Event date">
+            <mdc-icon leading #leadingicon>event</mdc-icon>
+        </mdc-text-field>
+        <p>Value: {{outlinedicon.getValue()}}</p>
+        <p>User: {{username}}</p>
+        
+    </div>
+
+    <div>
+
+        <mdc-list-group>
+            <h3 mdcListGroupSubheader>Users</h3>
+            <mdc-list [lines]="2" [avatar]="true" class="demo-list--custom">
+                <mdc-list-item *ngFor="let user of users$">
+                    <mdc-icon mdcListItemGraphic>person</mdc-icon>
+                    <mdc-list-item-text>
+                            {{user.name}}
+                        <mdc-list-item-secondary>{{user.email}}</mdc-list-item-secondary>
+                    </mdc-list-item-text>
+                    <a href="#" mdcListItemMeta mdcIcon
+                        aria-label="View more information" title="More info"
+                        onclick="event.preventDefault();">info</a>
+                </mdc-list-item>
+            </mdc-list>
+        </mdc-list-group>
+
+    </div>
+
+    </div>
+
+    <button mdc-fab position='bottom-right' mini='true' class="primaryFab">
+        <mdc-icon>add</mdc-icon>
+    </button>
+</ion-content>

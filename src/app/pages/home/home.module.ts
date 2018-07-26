@@ -3,21 +3,17 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '../../material';
+// import { MaterialModule } from '../../material';
 
 import { HomePage } from './home.page';
-
-
-
+import { SharedModule } from '../../shared/shared.module';
 @NgModule({
   imports: [
+    SharedModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    // BrowserAnimationsModule,
-    MaterialModule,
+    // MaterialModule,
     RouterModule.forChild([
       {
         path: '',

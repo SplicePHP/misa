@@ -1,0 +1,30 @@
+<ion-content>
+  <mdc-card>
+    <mdc-card-primary-action mdc-ripple>
+      <mdc-card-media class="demo-card__media--16-9" [wide]="true"></mdc-card-media>
+    </mdc-card-primary-action>
+    <mdc-card-actions>
+      <mdc-list [lines]="2" [avatar]="true" [interactive]="false" class="demo-list--custom">
+        <mdc-list-item>
+          <mdc-text-field #_username [outline]="true" [(ngModel)]="username" label="Username">
+            <mdc-icon leading>person</mdc-icon>
+          </mdc-text-field>
+        </mdc-list-item>
+        <mdc-list-item>
+          <mdc-text-field #_password [outline]="true" [(ngModel)]="password" label="Password">
+            <mdc-icon leading>lock</mdc-icon>
+          </mdc-text-field>
+        </mdc-list-item>
+        <mdc-list-item>
+            <button mdc-button [primary]="true" [raised]="true" (click)="login()">Login</button>
+            <div id="register">
+                <button mdc-button [primary]="true" [raised]="true" (click)="register()">Register</button>
+            </div>
+            
+        </mdc-list-item>
+        <mdc-list-divider inset></mdc-list-divider>
+        <button mdc-button [primary]="true" [raised]="true" (click)="login()">Sign in with Google</button>
+      </mdc-list>
+    </mdc-card-actions>
+  </mdc-card>
+</ion-content>

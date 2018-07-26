@@ -1,37 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MdcMaterialModule } from './material.module';
+import { ToolbarComponent } from '../ui/toolbar/toolbar.component';
+import { MaterialModule } from './material';
 
-import { StoreModule } from '@ngrx/store';
-import { reducer } from '../reducers/tutorial.reducer';
-import { ReadComponent } from '../read/read.component';
-import { CreateComponent } from '../create/create.component';
-
-// import { MdcTextField, MdcLineRipple, MdcNotchedOutline, MdcTextarea } from '@angular-mdc/web';
-import { MdcTextFieldModule } from '@angular-mdc/web';
 @NgModule({
   imports: [
-    StoreModule.forRoot({
-      tutorial: reducer
-    }),
-    CommonModule
+    CommonModule,
+    MdcMaterialModule,
+    MaterialModule,
   ],
   exports: [
     CommonModule,
-    ReadComponent,
-    CreateComponent,
-    MdcTextFieldModule
-    // MdcTextField,
-    // MdcLineRipple,
-    // MdcNotchedOutline,
-    // MdcTextarea
+    ToolbarComponent,
+    MdcMaterialModule,
+    MaterialModule,
   ],
   declarations: [
-    ReadComponent,
-    CreateComponent,
-    // MdcTextField,
-    // MdcLineRipple,
-    // MdcNotchedOutline,
-    // MdcTextarea
+    ToolbarComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+  hideHeader(){
+    document.getElementsByTagName('ion-header')[0].style.display = "none";
+  }
+  showHeader(){
+    document.getElementsByTagName('ion-header')[0].style.display = "block";
+  }
+}

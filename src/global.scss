@@ -14,6 +14,7 @@
 
 $mdc-theme-primary: #0054A6; // primary color
 $mdc-theme-secondary: #636466; // secondary color
+$rally-container: #363640;
 
 @import "~@angular-mdc/theme/material";
 
@@ -27,6 +28,7 @@ $mdc-theme-secondary: #636466; // secondary color
 .mdc-text-field--outlined{
   width: 100%;
 }
+// mdc-text-field
 .mdc-text-field__input{
   background: #fff;
 }
@@ -48,4 +50,8 @@ body {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 8px;
   padding: 8px;
+}
+
+ion-header{
+  top: 0px;
 }

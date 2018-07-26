@@ -10,10 +10,10 @@ export class HomePage {
   constructor(){
 
   }
-  fullScreen(){
+  hideHeader(){
     document.getElementsByTagName('ion-header')[0].style.display = "none";
   }
-  restoreHeader(){
+  showHeader(){
     document.getElementsByTagName('ion-header')[0].style.display = "block";
   }
 }
